@@ -1,0 +1,7 @@
+{
+  "name": "kgv-website",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
