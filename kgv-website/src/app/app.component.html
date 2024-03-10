@@ -1,3 +1,19 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main">
+    <ion-menu contentId="main">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          @for (site of sites; track $index) {
+          <ion-item href="{{site.url}}">{{site.name}}</ion-item>
+          }
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
